@@ -1,6 +1,6 @@
 using System;
 
-namespace quick_invoice.Models
+namespace QuickInvoice.Models
 {
     public class ErrorViewModel
     {

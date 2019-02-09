@@ -4,9 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using quick_invoice.Models;
+using QuickInvoice.Models;
 
-namespace quick_invoice.Controllers
+namespace QuickInvoice.Controllers
 {
     public class HomeController : Controller
     {

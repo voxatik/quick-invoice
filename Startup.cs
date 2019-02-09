@@ -9,8 +9,9 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using QuickInvoice.Config;
 
-namespace quick_invoice
+namespace QuickInvoice
 {
     public class Startup
     {
@@ -33,6 +34,7 @@ namespace quick_invoice
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddSingleton<MixManifest, MixManifest>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
