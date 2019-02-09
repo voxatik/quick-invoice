@@ -5,8 +5,13 @@ import Vuetify from 'vuetify'
 window.Vue = Vue;
 Vue.use(Vuetify)
 
-import axios from './axios'
+import CookieConsent from "./component/CookieConsent"
+
+
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+    components: {
+        CookieConsent
+    }
 });
