@@ -21,11 +21,11 @@ namespace QuickInvoice.TagHelpers
 
             if (tag == "link")
             {
-                output.Attributes.Add("href", mixManifest.config[Mix]);
+                output.Attributes.Add("href", mixManifest.config[Mix] ?? Mix);
             }
             else if (tag == "script")
             {
-                output.Attributes.Add("src", mixManifest.config[Mix]);
+                output.Attributes.Add("src", mixManifest.config[Mix] ?? Mix);
             }
         }
 
