@@ -15,6 +15,7 @@ namespace QuickInvoice.Controllers
             return View();
         }
 
+        [HttpGet("/privacy")]
         public IActionResult Privacy()
         {
             return View();
