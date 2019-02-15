@@ -14,7 +14,7 @@
     <title>@ViewData["Title"] - QuickInvoice</title>
     <style>
         html, body, main {
-            height: 100vh;
+            #height: 100vh;
         }
     </style>
     <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons' rel="stylesheet">
@@ -22,31 +22,33 @@
 </head>
 <body>
     <div id="app">
-        <header>
-            <v-toolbar color="teal lighten-2">
-                    
-                </v-toolbar-title><v-btn flat href="/">QuickInvoice</v-btn></v-toolbar-title>
-                <v-spacer></v-spacer>
-                <div>
-                    <v-btn color="gray">Login</v-btn>
-                    <v-btn color="dark">Sign Up</v-btn>
-                </div>
-            </v-toolbar>
-        </header>    
-        <partial name="_CookieConsentPartial" />
-        <v-container>
-            <v-layout>
-                <main role="main" class="pb-3">
-                    @RenderBody()
-                </main>
-            </v-layout>
-        </v-container>
+        <v-app>
+            <header>
+                <v-toolbar color="teal lighten-2">
+                        
+                    </v-toolbar-title><v-btn flat href="/">QuickInvoice</v-btn></v-toolbar-title>
+                    <v-spacer></v-spacer>
+                    <div>
+                        <v-btn color="gray" href="/login">Login</v-btn>
+                        <v-btn color="dark" href="/register">Sign Up</v-btn>
+                    </div>
+                </v-toolbar>
+            </header>    
+            <partial name="_CookieConsentPartial" />
+            <v-container justify-center>
+                <v-layout justify-center>
+                    <main role="main" class="pb-3">
+                        @RenderBody()
+                    </main>
+                </v-layout>
+            </v-container>
 
-        <v-footer fixed>
-            <v-layout align-center justify-center>
-                <div>&copy; 2019 - QuickInvoice - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></div>
-            </v-layout>
-        </v-footer>
+            <v-footer fixed>
+                <v-layout align-center justify-center>
+                    <div>&copy; 2019 - QuickInvoice - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></div>
+                </v-layout>
+            </v-footer>
+        </v-app>
     </div>
 
     <script mix="/js/site.js"></script>
