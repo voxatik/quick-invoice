@@ -5,7 +5,7 @@ namespace QuickInvoice.Forms
     public class LoginForm
     {
         [Required]
-        [DataType("Email")]
+        [EmailAddress]
         public string Email { get; set; }
         
         [Required]
